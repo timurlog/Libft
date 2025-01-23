@@ -6,7 +6,7 @@
 /*   By: tilogie <tilogie@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 10:46:15 by tilogie           #+#    #+#             */
-/*   Updated: 2025/01/10 11:40:20 by tilogie          ###   ########.fr       */
+/*   Updated: 2025/01/23 11:26:58 by tilogie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@
 # include <unistd.h>
 # include <stdlib.h>
 # include <stdio.h>
+# include <stdarg.h>
+# include <stdint.h>
 
 typedef struct s_list
 {
@@ -66,5 +68,21 @@ void		ft_lstdelone(t_list *lst, void (*del)(void *));
 void		ft_lstclear(t_list **lst, void (*del)(void *));
 void		ft_lstiter(t_list *lst, void (*f)(void *));
 t_list		*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
+int			ft_printf(const char *format, ...);
+int			ft_formats(va_list args, const char format);
+int			ft_printchar(int c);
+int			ft_printstr(char *str);
+int			ft_ptr_printf(unsigned long long ptr);
+int			ft_printnbr(int n);
+int			ft_unsigned_printf(unsigned int n);
+int			ft_hex_printf(unsigned int num, const char format);
+int			ft_printpercent(void);
+void		ft_putstr_2(char *str);
+void		ft_put_ptr(uintptr_t num);
+int			ft_ptr_len(uintptr_t num);
+char		*ft_uitoa(unsigned int n);
+int			ft_num_len(unsigned	int num);
+void		ft_put_hex(unsigned int num, const char format);
+int			ft_hex_len(unsigned	int num);
 
 #endif
