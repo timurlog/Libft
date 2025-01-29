@@ -62,7 +62,7 @@ int			ft_printnbr(int n);
 int			ft_unsigned_printf(unsigned int n);
 int			ft_hex_printf(unsigned int num, const char format);
 int			ft_printpercent(void);
-void		ft_putstr_2(char *str);
+void		ft_putstr(char *str);
 void		ft_put_ptr(uintptr_t num);
 int			ft_ptr_len(uintptr_t num);
 char		*ft_uitoa(unsigned int n);

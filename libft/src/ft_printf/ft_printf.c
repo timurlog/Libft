@@ -65,3 +65,9 @@ int	ft_printf(const char *str, ...)
 	va_end(args);
 	return (printf_len);
 }
+
+int	main(void)
+{
+	ft_printf("Hello, %s!\n", "world");
+	return (0);
+}
