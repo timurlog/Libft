@@ -6,7 +6,7 @@
 /*   By: tilogie <tilogie@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 10:46:15 by tilogie           #+#    #+#             */
-/*   Updated: 2025/01/23 14:30:25 by tilogie          ###   ########.fr       */
+/*   Updated: 2025/02/04 16:57:30 by tilogie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,21 +54,12 @@ void		*ft_memset(void *b, int c, size_t len);
 
 // FT_PRINTF
 int			ft_printf(const char *format, ...);
-int			ft_formats(va_list args, const char format);
-int			ft_printchar(int c);
 int			ft_printstr(char *str);
 int			ft_ptr_printf(unsigned long long ptr);
 int			ft_printnbr(int n);
 int			ft_unsigned_printf(unsigned int n);
 int			ft_hex_printf(unsigned int num, const char format);
 int			ft_printpercent(void);
-void		ft_putstr_2(char *str);
-void		ft_put_ptr(uintptr_t num);
-int			ft_ptr_len(uintptr_t num);
-char		*ft_uitoa(unsigned int n);
-int			ft_num_len(unsigned	int num);
-void		ft_put_hex(unsigned int num, const char format);
-int			ft_hex_len(unsigned	int num);
 
 // FT_PUT
 void		ft_putchar_fd(char c, int fd);
