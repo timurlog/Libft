@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-void	ft_putstr_2(char *str)
+void	ft_putstr(char *str)
 {
 	int	i;
 
@@ -31,7 +31,7 @@ int	ft_printstr(char *str)
 	i = 0;
 	if (str == NULL)
 	{
-		ft_putstr_2("(null)");
+		ft_putstr("(null)");
 		return (6);
 	}
 	while (str[i])
