@@ -6,7 +6,7 @@
 /*   By: tilogie <tilogie@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/10 12:29:10 by tilogie           #+#    #+#             */
-/*   Updated: 2025/02/04 17:00:52 by tilogie          ###   ########.fr       */
+/*   Updated: 2025/02/06 17:40:07 by tilogie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,4 +65,3 @@ int	ft_printf(const char *str, ...)
 	va_end(args);
 	return (printf_len);
 }
-

@@ -6,7 +6,7 @@
 /*   By: tilogie <tilogie@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 10:46:15 by tilogie           #+#    #+#             */
-/*   Updated: 2025/02/04 17:03:29 by tilogie          ###   ########.fr       */
+/*   Updated: 2025/02/06 17:36:31 by tilogie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,10 @@
 # include <stdio.h>
 # include <stdarg.h>
 # include <stdint.h>
+
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 1000
+# endif
 
 typedef struct s_list
 {
@@ -88,5 +92,11 @@ int			ft_atoi(const char *str);
 char		*ft_itoa(int n);
 int			ft_tolower(int c);
 int			ft_toupper(int c);
+
+// GNL
+char		*get_next_line(int fd);
+char		*ft_gnl_strchr(char *s, int c);
+char		*ft_gnl_strjoin(char *left_line_str, char *buffer);
+size_t		ft_gnl_strlen(char *s);
 
 #endif

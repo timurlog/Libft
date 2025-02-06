@@ -6,7 +6,7 @@
 #    By: tilogie <tilogie@student.s19.be>           +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/09 10:46:01 by tilogie           #+#    #+#              #
-#    Updated: 2025/01/23 11:33:36 by tilogie          ###   ########.fr        #
+#    Updated: 2025/02/06 17:39:33 by tilogie          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -60,6 +60,9 @@ FTPRINTF_DIR	=	ft_printf/
 FTPRINTF		=	ft_hex_printf ft_printf ft_ptr_printf ft_unsigned_printf \
 					ft_utils_printf
 
+GNL_DIR			=	gnl/
+GNL				=	get_next_line_utils get_next_line
+
 SRC_FILES+=$(addprefix $(FTIS_DIR),$(FTIS))
 SRC_FILES+=$(addprefix $(FTMEM_DIR),$(FTMEM))
 SRC_FILES+=$(addprefix $(FTPUT_DIR),$(FTPUT))
@@ -67,6 +70,7 @@ SRC_FILES+=$(addprefix $(FTTO_DIR),$(FTTO))
 SRC_FILES+=$(addprefix $(FTSTR_DIR),$(FTSTR))
 SRC_FILES+=$(addprefix $(FTLST_DIR),$(FTLST))
 SRC_FILES+=$(addprefix $(FTPRINTF_DIR),$(FTPRINTF))
+SRC_FILES+=$(addprefix $(GNL_DIR),$(GNL))
 
 SRCS 		= 	$(addprefix $(SRCS_DIR), $(addsuffix .c, $(SRC_FILES)))
 OBJS 		= 	$(addprefix $(OBJS_DIR), $(addsuffix .o, $(SRC_FILES)))
@@ -95,6 +99,7 @@ $(OBJSF):
 			@mkdir -p $(OBJS_DIR)$(FTSTR_DIR)
 			@mkdir -p $(OBJS_DIR)$(FTLST_DIR)
 			@mkdir -p $(OBJS_DIR)$(FTPRINTF_DIR)
+			@mkdir -p $(OBJS_DIR)$(GNL_DIR)
 
 clean:
 			@$(RM) -rf $(OBJS_DIR)
