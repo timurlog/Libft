@@ -6,7 +6,7 @@
 /*   By: tilogie <tilogie@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/03 16:02:13 by tilogie           #+#    #+#             */
-/*   Updated: 2025/02/06 17:40:27 by tilogie          ###   ########.fr       */
+/*   Updated: 2025/02/06 17:42:25 by tilogie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -116,19 +116,4 @@ char	*get_next_line(int fd)
 		left_line_str = NULL;
 	}
 	return (line_str);
-}
-
-#include <fcntl.h>
-#include <stdio.h>
-int main(void)
-{
-	int		fd = open("test.txt", O_RDONLY);
-	char	*line;
-	while ((line = get_next_line(fd)) != NULL)
-	{
-		printf("%s", line);
-		free(line);
-	}
-	close(fd);
-	return (0);
 }
