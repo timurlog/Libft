@@ -104,11 +104,11 @@ $(OBJSF):
 clean:
 			@$(RM) -rf $(OBJS_DIR)
 			@$(RM) -f $(OBJSF)
-			@echo "$(BLUE)libft objects files cleaned!$(DEF_COLOR)"
+			@echo "$(BLUE)Libft objects files cleaned!$(DEF_COLOR)"
 
 fclean:		clean
 			@$(RM) -f $(NAME)
-			@echo "$(CYAN)libft executable files cleaned!$(DEF_COLOR)"
+			@echo "$(CYAN)Libft executable files cleaned!$(DEF_COLOR)"
 
 re:			fclean all
 			@echo "$(GREEN)Cleaned and rebuilt everything for libft!$(DEF_COLOR)"
