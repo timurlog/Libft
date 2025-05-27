@@ -84,10 +84,10 @@ all:		$(NAME)
 $(NAME):	$(OBJS)
 			@$(AR) $(NAME) $(OBJS)
 			@ranlib $(NAME)
-			@echo -e "$(GREEN)Libft compiled!$(DEF_COLOR)"
+			@echo "$(GREEN)Libft compiled!$(DEF_COLOR)"
 
 $(OBJS_DIR)%.o : $(SRCS_DIR)%.c | $(OBJSF)
-			@echo -e "$(YELLOW)Compiling: $< $(DEF_COLOR)"
+			@echo "$(YELLOW)Compiling: $< $(DEF_COLOR)"
 			@$(CC) $(CFLAGS) $(INCS) -c $< -o $@
 
 $(OBJSF):
@@ -104,14 +104,14 @@ $(OBJSF):
 clean:
 			@$(RM) -rf $(OBJS_DIR)
 			@$(RM) -f $(OBJSF)
-			@echo -e "$(BLUE)Libft objects files cleaned!$(DEF_COLOR)"
+			@echo "$(BLUE)Libft objects files cleaned!$(DEF_COLOR)"
 
 fclean:		clean
 			@$(RM) -f $(NAME)
-			@echo -e "$(CYAN)Libft executable files cleaned!$(DEF_COLOR)"
+			@echo "$(CYAN)Libft executable files cleaned!$(DEF_COLOR)"
 
 re:			fclean all
-			@echo -e "$(GREEN)Cleaned and rebuilt everything for libft!$(DEF_COLOR)"
+			@echo "$(GREEN)Cleaned and rebuilt everything for libft!$(DEF_COLOR)"
 
 # Check code style with norminette
 norm:
