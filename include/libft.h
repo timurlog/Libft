@@ -6,7 +6,7 @@
 /*   By: tilogie <tilogie@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 10:46:15 by tilogie           #+#    #+#             */
-/*   Updated: 2025/02/06 17:36:31 by tilogie          ###   ########.fr       */
+/*   Updated: 2025/11/27 14:24:19 by tilogie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,6 +70,7 @@ void		ft_putchar_fd(char c, int fd);
 void		ft_putendl_fd(char *s, int fd);
 void		ft_putnbr_fd(int n, int fd);
 void		ft_putstr_fd(char *s, int fd);
+void		ft_putnstr_fd(char *s, size_t n, int fd);
 
 // FT_STR
 char		**ft_split(const char *s, char c);

@@ -6,7 +6,7 @@
 #    By: tilogie <tilogie@student.s19.be>           +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/09 10:46:01 by tilogie           #+#    #+#              #
-#    Updated: 2025/02/06 17:39:33 by tilogie          ###   ########.fr        #
+#    Updated: 2025/11/27 14:25:30 by tilogie          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -42,7 +42,7 @@ FTMEM_DIR		=	ft_mem/
 FTMEM			=	ft_bzero ft_calloc ft_memchr ft_memcmp ft_memmove ft_memset
 
 FTPUT_DIR		=	ft_put/
-FTPUT			=	ft_putchar_fd ft_putendl_fd ft_putnbr_fd ft_putstr_fd
+FTPUT			=	ft_putchar_fd ft_putendl_fd ft_putnbr_fd ft_putstr_fd ft_putnstr_fd
 
 FTTO_DIR		=	ft_to/
 FTTO			=	ft_atoi ft_itoa ft_tolower ft_toupper
