@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: tilogie <tilogie@student.s19.be>           +#+  +:+       +#+         #
+#    By: tilogie <tilogie@student.42belgium.be>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/09 10:46:01 by tilogie           #+#    #+#              #
-#    Updated: 2025/11/27 14:25:30 by tilogie          ###   ########.fr        #
+#    Updated: 2025/12/25 18:54:04 by tilogie          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -48,7 +48,7 @@ FTTO_DIR		=	ft_to/
 FTTO			=	ft_atoi ft_itoa ft_tolower ft_toupper
 
 FTSTR_DIR		=	ft_str/
-FTSTR			=	ft_split ft_strchr ft_strdup ft_striteri ft_strjoin \
+FTSTR			=	ft_split ft_strchr ft_strcmp ft_strdup ft_striteri ft_strjoin \
 					ft_strlcat ft_strlcpy ft_strlen ft_strmapi ft_strncmp \
 					ft_strnstr ft_strrchr ft_strtrim ft_substr
 

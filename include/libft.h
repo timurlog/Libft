@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tilogie <tilogie@student.s19.be>           +#+  +:+       +#+        */
+/*   By: tilogie <tilogie@student.42belgium.be>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 10:46:15 by tilogie           #+#    #+#             */
-/*   Updated: 2025/11/27 14:24:19 by tilogie          ###   ########.fr       */
+/*   Updated: 2025/12/25 18:54:15 by tilogie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,6 +75,7 @@ void		ft_putnstr_fd(char *s, size_t n, int fd);
 // FT_STR
 char		**ft_split(const char *s, char c);
 char		*ft_strchr(const char *s, int c);
+int			ft_strcmp(const char *s1, const char *s2);
 char		*ft_strdup(const char *s1);
 void		ft_striteri(char *s, void (*f)(unsigned int, char*));
 char		*ft_strjoin(char const *s1, char const *s2);
