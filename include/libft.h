@@ -6,7 +6,7 @@
 /*   By: tilogie <tilogie@student.42belgium.be>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 10:46:15 by tilogie           #+#    #+#             */
-/*   Updated: 2026/01/08 02:36:06 by tilogie          ###   ########.fr       */
+/*   Updated: 2026/01/08 15:15:16 by tilogie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
 # include <stdint.h>
 
 # ifndef BUFFER_SIZE
-#  define BUFFER_SIZE 1024
+#  define BUFFER_SIZE 4096
 # endif
 
 typedef struct s_list
