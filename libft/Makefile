@@ -6,7 +6,7 @@
 #    By: tilogie <tilogie@student.42belgium.be>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/09 10:46:01 by tilogie           #+#    #+#              #
-#    Updated: 2025/12/25 18:54:04 by tilogie          ###   ########.fr        #
+#    Updated: 2026/01/08 02:37:00 by tilogie          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,15 +23,15 @@ AR			=	ar rcs
 
 #Colors
 
-DEF_COLOR = \033[0;39m
-GRAY = \033[0;90m
-RED = \033[0;91m
-GREEN = \033[0;92m
-YELLOW = \033[0;93m
-BLUE = \033[0;94m
-MAGENTA = \033[0;95m
-CYAN = \033[0;96m
-WHITE = \033[0;97m
+DEF_COLOR = \e[0;39m
+GRAY = \e[0;90m
+RED = \e[0;91m
+GREEN = \e[0;92m
+YELLOW = \e[0;93m
+BLUE = \e[0;94m
+MAGENTA = \e[0;95m
+CYAN = \e[0;96m
+WHITE = \e[0;97m
 
 #Sources
 
