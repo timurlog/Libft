@@ -6,7 +6,7 @@
 #    By: tilogie <tilogie@student.42belgium.be>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/01/09 19:57:54 by tilogie           #+#    #+#              #
-#    Updated: 2026/01/09 20:10:44 by tilogie          ###   ########.fr        #
+#    Updated: 2026/01/09 21:26:32 by tilogie          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -81,7 +81,7 @@ SRC_FILES+=$(addprefix $(GNL_DIR),$(GNL))
 
 SRC			= $(addprefix $(SRC_DIR), $(addsuffix .c, $(SRC_FILES)))
 OBJ			= $(addprefix $(OBJ_DIR), $(addsuffix .o, $(SRC_FILES)))
-OBJF		= .cache_exists
+OBJF		= obj/.cache_exists
 
 # ════════════════════════════════════════════════════════════════════════════ #
 #                                  RULES                                       #
@@ -124,6 +124,6 @@ re:			fclean all
 
 norm:
 			@echo "$(MAGENTA)Running norminette...$(DEF_COLOR)"
-			@norminette $(LIBFT) $(INCLUDE) $(SRC_DIR) 2>/dev/null | grep -v "OK!" || true
+			@norminette $(INCLUDE) $(SRC_DIR) 2>/dev/null | grep -v "OK!" || true
 
 .PHONY:		all clean fclean re norm
