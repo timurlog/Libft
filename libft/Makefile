@@ -5,35 +5,42 @@
 #                                                     +:+ +:+         +:+      #
 #    By: tilogie <tilogie@student.42belgium.be>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2024/10/09 10:46:01 by tilogie           #+#    #+#              #
-#    Updated: 2026/01/08 02:37:00 by tilogie          ###   ########.fr        #
+#    Created: 2026/01/09 19:57:54 by tilogie           #+#    #+#              #
+#    Updated: 2026/01/09 20:10:44 by tilogie          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-#Standard
+# ════════════════════════════════════════════════════════════════════════════ #
+#                                  CONFIG                                      #
+# ════════════════════════════════════════════════════════════════════════════ #
 
-NAME		=	libft.a
-INCS		=	../include
-SRCS_DIR 	=	src/
-OBJS_DIR	=	obj/
-CC			=	cc
-CFLAGS		=	-Wall -Werror -Wextra -I
-RM			=	rm -f
-AR			=	ar rcs
+NAME		= libft.a
+INCLUDE		= ../include
+SRC_DIR		= src/
+OBJ_DIR		= obj/
 
-#Colors
+CC			= cc
+CFLAGS		= -Wall -Werror -Wextra -I $(INCLUDE)
+RM			= rm -f
+AR			= ar rcs
 
-DEF_COLOR = \e[0;39m
-GRAY = \e[0;90m
-RED = \e[0;91m
-GREEN = \e[0;92m
-YELLOW = \e[0;93m
-BLUE = \e[0;94m
-MAGENTA = \e[0;95m
-CYAN = \e[0;96m
-WHITE = \e[0;97m
+# ════════════════════════════════════════════════════════════════════════════ #
+#                                  COLORS                                      #
+# ════════════════════════════════════════════════════════════════════════════ #
 
-#Sources
+DEF_COLOR	= \e[0;39m
+GRAY		= \e[0;90m
+RED			= \e[0;91m
+GREEN		= \e[0;92m
+YELLOW		= \e[0;93m
+BLUE		= \e[0;94m
+MAGENTA		= \e[0;95m
+CYAN		= \e[0;96m
+WHITE		= \e[0;97m
+
+# ════════════════════════════════════════════════════════════════════════════ #
+#                                  SOURCES                                     #
+# ════════════════════════════════════════════════════════════════════════════ #
 
 FTIS_DIR		=	ft_is/
 FTIS			=	ft_isalnum ft_isalpha ft_isascii ft_isdigit ft_isprint
@@ -72,49 +79,51 @@ SRC_FILES+=$(addprefix $(FTLST_DIR),$(FTLST))
 SRC_FILES+=$(addprefix $(FTPRINTF_DIR),$(FTPRINTF))
 SRC_FILES+=$(addprefix $(GNL_DIR),$(GNL))
 
-SRCS 		= 	$(addprefix $(SRCS_DIR), $(addsuffix .c, $(SRC_FILES)))
-OBJS 		= 	$(addprefix $(OBJS_DIR), $(addsuffix .o, $(SRC_FILES)))
+SRC			= $(addprefix $(SRC_DIR), $(addsuffix .c, $(SRC_FILES)))
+OBJ			= $(addprefix $(OBJ_DIR), $(addsuffix .o, $(SRC_FILES)))
+OBJF		= .cache_exists
 
-###
-
-OBJSF		=	.cache_exists
+# ════════════════════════════════════════════════════════════════════════════ #
+#                                  RULES                                       #
+# ════════════════════════════════════════════════════════════════════════════ #
 
 all:		$(NAME)
 
-$(NAME):	$(OBJS)
-			@$(AR) $(NAME) $(OBJS)
+$(NAME):	$(OBJ)
+			@$(AR) $(NAME) $(OBJ)
 			@ranlib $(NAME)
-			@echo "$(GREEN)Libft compiled!$(DEF_COLOR)"
+			@echo "$(GREEN)✓ libft.a compiled!$(DEF_COLOR)"
 
-$(OBJS_DIR)%.o : $(SRCS_DIR)%.c | $(OBJSF)
-			@echo "$(YELLOW)Compiling: $< $(DEF_COLOR)"
-			@$(CC) $(CFLAGS) $(INCS) -c $< -o $@
+$(OBJ_DIR)%.o: $(SRC_DIR)%.c | $(OBJF)
+			@echo "$(YELLOW)  Compiling: $<$(DEF_COLOR)"
+			@$(CC) $(CFLAGS) -c $< -o $@
 
-$(OBJSF):
-			@mkdir -p $(OBJS_DIR)
-			@mkdir -p $(OBJS_DIR)$(FTIS_DIR)
-			@mkdir -p $(OBJS_DIR)$(FTMEM_DIR)
-			@mkdir -p $(OBJS_DIR)$(FTPUT_DIR)
-			@mkdir -p $(OBJS_DIR)$(FTTO_DIR)
-			@mkdir -p $(OBJS_DIR)$(FTSTR_DIR)
-			@mkdir -p $(OBJS_DIR)$(FTLST_DIR)
-			@mkdir -p $(OBJS_DIR)$(FTPRINTF_DIR)
-			@mkdir -p $(OBJS_DIR)$(GNL_DIR)
+$(OBJF):
+			@mkdir -p $(OBJ_DIR)
+			@mkdir -p $(OBJ_DIR)$(FTIS_DIR)
+			@mkdir -p $(OBJ_DIR)$(FTMEM_DIR)
+			@mkdir -p $(OBJ_DIR)$(FTPUT_DIR)
+			@mkdir -p $(OBJ_DIR)$(FTTO_DIR)
+			@mkdir -p $(OBJ_DIR)$(FTSTR_DIR)
+			@mkdir -p $(OBJ_DIR)$(FTLST_DIR)
+			@mkdir -p $(OBJ_DIR)$(FTPRINTF_DIR)
+			@mkdir -p $(OBJ_DIR)$(GNL_DIR)
+			@touch $(OBJF)
 
 clean:
-			@$(RM) -rf $(OBJS_DIR)
-			@$(RM) -f $(OBJSF)
-			@echo "$(BLUE)Libft objects files cleaned!$(DEF_COLOR)"
+			@$(RM) -rf $(OBJ_DIR)
+			@$(RM) -f $(OBJF)
+			@echo "$(BLUE)✓ libft object files cleaned!$(DEF_COLOR)"
 
 fclean:		clean
 			@$(RM) -f $(NAME)
-			@echo "$(CYAN)Libft executable files cleaned!$(DEF_COLOR)"
+			@echo "$(CYAN)✓ libft library files cleaned!$(DEF_COLOR)"
 
 re:			fclean all
-			@echo "$(GREEN)Cleaned and rebuilt everything for libft!$(DEF_COLOR)"
+			@echo "$(GREEN)✓ libft recompiled!$(DEF_COLOR)"
 
-# Check code style with norminette
 norm:
-	@norminette $(SRCS) $(INCS) | grep -v Norme -B1 || true
+			@echo "$(MAGENTA)Running norminette...$(DEF_COLOR)"
+			@norminette $(LIBFT) $(INCLUDE) $(SRC_DIR) 2>/dev/null | grep -v "OK!" || true
 
 .PHONY:		all clean fclean re norm
