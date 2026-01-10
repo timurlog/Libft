@@ -6,7 +6,7 @@
 /*   By: tilogie <tilogie@student.42belgium.be>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 10:46:15 by tilogie           #+#    #+#             */
-/*   Updated: 2026/01/08 15:15:16 by tilogie          ###   ########.fr       */
+/*   Updated: 2026/01/10 01:52:16 by tilogie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,6 +88,9 @@ char		*ft_strnstr(const char *haystack, const char *needle, size_t len);
 char		*ft_strrchr(const char *s, int c);
 char		*ft_strtrim(char const *s1, char const *set);
 char		*ft_substr(char const *s, unsigned int start, size_t len);
+char		**ft_strdup_array(char **array);
+void		ft_strdup_array_free(char **array);
+char		*ft_strjoin_free(char *s1, char *s2, int free_flag);
 
 // FT_TO
 int			ft_atoi(const char *str);
