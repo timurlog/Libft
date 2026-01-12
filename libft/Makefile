@@ -6,7 +6,7 @@
 #    By: tilogie <tilogie@student.42belgium.be>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/01/09 19:57:54 by tilogie           #+#    #+#              #
-#    Updated: 2026/01/10 13:47:30 by tilogie          ###   ########.fr        #
+#    Updated: 2026/01/12 16:15:23 by tilogie          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -58,7 +58,7 @@ FTSTR_DIR		=	ft_str/
 FTSTR			=	ft_split ft_strchr ft_strcmp ft_strdup ft_striteri ft_strjoin \
 					ft_strlcat ft_strlcpy ft_strlen ft_strmapi ft_strncmp \
 					ft_strnstr ft_strrchr ft_strtrim ft_substr ft_strdup_array \
-					ft_strdup_array_free
+					ft_strdup_array_free ft_strjoin_three ft_strstr
 
 FTLST_DIR		=	ft_lst/
 FTLST			=	ft_lstadd_back ft_lstadd_front ft_lstclear ft_lstdelone \

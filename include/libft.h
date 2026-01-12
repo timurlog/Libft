@@ -6,7 +6,7 @@
 /*   By: tilogie <tilogie@student.42belgium.be>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 10:46:15 by tilogie           #+#    #+#             */
-/*   Updated: 2026/01/10 13:45:12 by tilogie          ###   ########.fr       */
+/*   Updated: 2026/01/12 16:15:54 by tilogie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,6 +79,7 @@ int			ft_strcmp(const char *s1, const char *s2);
 char		*ft_strdup(const char *s1);
 void		ft_striteri(char *s, void (*f)(unsigned int, char*));
 char		*ft_strjoin(char const *s1, char const *s2);
+char		*ft_strjoin_three(char *s1, size_t n, char *s2, char *s3);
 size_t		ft_strlcat(char *dst, const char *src, size_t dstsize);
 size_t		ft_strlcpy(char *dst, const char *src, size_t dstsize);
 size_t		ft_strlen(const char *s);
@@ -86,6 +87,7 @@ char		*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 int			ft_strncmp(const char *s1, const char *s2, size_t n);
 char		*ft_strnstr(const char *haystack, const char *needle, size_t len);
 char		*ft_strrchr(const char *s, int c);
+char		*ft_strstr(const char *haystack, const char *needle);
 char		*ft_strtrim(char const *s1, char const *set);
 char		*ft_substr(char const *s, unsigned int start, size_t len);
 char		**ft_strdup_array(char **array);
