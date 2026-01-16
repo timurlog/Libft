@@ -1,41 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup_array.c                                  :+:      :+:    :+:   */
+/*   ft_array_free.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tilogie <tilogie@student.42belgium.be>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/10 01:50:05 by tilogie           #+#    #+#             */
-/*   Updated: 2026/01/16 02:15:35 by tilogie          ###   ########.fr       */
+/*   Created: 2026/01/10 01:50:59 by tilogie           #+#    #+#             */
+/*   Updated: 2026/01/10 01:51:11 by tilogie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	**ft_strdup_array(char **array)
+void	ft_array_free(char **array)
 {
-	char	**dup;
-	int		i;
+	int	i;
 
 	if (!array)
-		return (NULL);
-	i = 0;
-	while (array[i])
-		i++;
-	dup = malloc((i + 1) * sizeof(char *));
-	if (!dup)
-		return (NULL);
+		return ;
 	i = 0;
 	while (array[i])
 	{
-		dup[i] = ft_strdup(array[i]);
-		if (!dup[i])
-		{
-			ft_array_free(dup);
-			return (NULL);
-		}
+		free(array[i]);
 		i++;
 	}
-	dup[i] = NULL;
-	return (dup);
+	free(array);
 }
