@@ -6,7 +6,7 @@
 #    By: tilogie <tilogie@student.42belgium.be>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/01/09 19:57:54 by tilogie           #+#    #+#              #
-#    Updated: 2026/01/16 02:15:35 by tilogie          ###   ########.fr        #
+#    Updated: 2026/05/29 15:13:09 by tilogie          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -93,10 +93,10 @@ all:		$(NAME)
 $(NAME):	$(OBJ)
 			@$(AR) $(NAME) $(OBJ)
 			@ranlib $(NAME)
-			@echo "$(GREEN)✓ libft.a compiled!$(DEF_COLOR)"
+			@printf "$(GREEN)✓ libft.a compiled!$(DEF_COLOR)\n"
 
 $(OBJ_DIR)%.o: $(SRC_DIR)%.c | $(OBJF)
-			@echo "$(YELLOW)  Compiling: $<$(DEF_COLOR)"
+			@printf "$(YELLOW)  Compiling: $<$(DEF_COLOR)\n"
 			@$(CC) $(CFLAGS) -c $< -o $@
 
 $(OBJF):
@@ -114,17 +114,17 @@ $(OBJF):
 clean:
 			@$(RM) -rf $(OBJ_DIR)
 			@$(RM) -f $(OBJF)
-			@echo "$(BLUE)✓ libft object files cleaned!$(DEF_COLOR)"
+			@printf "$(BLUE)✓ libft object files cleaned!$(DEF_COLOR)\n"
 
 fclean:		clean
 			@$(RM) -f $(NAME)
-			@echo "$(CYAN)✓ libft library files cleaned!$(DEF_COLOR)"
+			@printf "$(CYAN)✓ libft library files cleaned!$(DEF_COLOR)\n"
 
 re:			fclean all
-			@echo "$(GREEN)✓ libft recompiled!$(DEF_COLOR)"
+			@printf "$(GREEN)✓ libft recompiled!$(DEF_COLOR)\n"
 
 norm:
-			@echo "$(MAGENTA)Running norminette...$(DEF_COLOR)"
+			@printf "$(MAGENTA)Running norminette...$(DEF_COLOR)\n"
 			@norminette $(INCLUDE) $(SRC_DIR) 2>/dev/null | grep -v "OK!" || true
 
 .PHONY:		all clean fclean re norm
